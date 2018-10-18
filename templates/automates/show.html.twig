@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Automates{% endblock %}
+
+{% block body %}
+    <h1>Automates</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ automate.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ automate.nom }}</td>
+            </tr>
+            <tr>
+                <th>Marque</th>
+                <td>{{ automate.marque }}</td>
+            </tr>
+            <tr>
+                <th>Serial</th>
+                <td>{{ automate.serial }}</td>
+            </tr>
+            <tr>
+                <th>Config</th>
+                <td>{{ automate.config }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('automates_index') }}">back to list</a>
+
+    <a href="{{ path('automates_edit', {'id': automate.id}) }}">edit</a>
+
+    {{ include('automates/_delete_form.html.twig') }}
+{% endblock %}

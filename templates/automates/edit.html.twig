@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Automates{% endblock %}
+
+{% block body %}
+    <h1>Edit Automates</h1>
+
+    {{ include('automates/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('automates_index') }}">back to list</a>
+
+    {{ include('automates/_delete_form.html.twig') }}
+{% endblock %}
